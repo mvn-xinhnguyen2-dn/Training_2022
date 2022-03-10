@@ -16,6 +16,10 @@ h1{
   padding: 20px;
   font-size: 25px;
 }
+h2{
+  padding: 15px;
+  font-size: 20;
+}
 
 /* ví dụ về box-model */
 #box-wrap{
@@ -52,22 +56,44 @@ h1{
 .box5{
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+}
+.scroll{
+  margin-top: 30px;
+  max-width: 500px;
+  height: 200px;
+  overflow: scroll;
+}
+.nav-menu{
+  display: flex;
+}
+.logo{
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 20px;
 }
 
 
 /* ví dụ về child Selector */
+
+.nav-menu > li{
+  text-align: center;
+}
 .menu-list{
-  background-color: bisque;
   padding: 10px;
   margin:10px 0px;
+  display: flex;
+  max-width: 600px;
 }
 .menu-list .menu-item > a{
 color: rgb(20, 20, 117);
 font-size: 22px;
+font-weight: 500;
+text-transform: uppercase;
+background-color: bisque;
 }
-.menu-list{
-  display: flex;
-}
+
 ul>li{
 margin: 10px 0px;
 }
@@ -82,20 +108,20 @@ margin: 10px 0px;
 .menu-list>li.menu-item:nth-child(3) a{
   background-color: rgb(87, 129, 75);
 }
-a:hover{
-  background-color: rgb(185, 219, 122);
-}
-a:active{
-  background-color: red;
-}
-p:only-of-type{
+
+.parent p:only-of-type{
   background-color: rgb(226, 128, 128);
   color: rgb(39, 16, 121);
 }
-p:last-child{
+.parent p:last-child{
   border: 1px solid;
 }
-
+.menu-list a:hover{
+  background-color: rgb(185, 219, 122);
+}
+.menu-list > li a:active{
+  background-color: red;
+}
 
 
 /* ví dụ về psuedo element */
@@ -124,3 +150,4 @@ p:last-child{
   color: red;
   background-color: rgb(166, 243, 65);
 }
+
