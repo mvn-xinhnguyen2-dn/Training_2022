@@ -348,7 +348,9 @@ html {
 }
 
 .product-item .product-name {
+  font-size: 14px;
   padding: 10px;
+  font-weight: 500;
 }
 
 .product-item .product-name:hover {
@@ -495,6 +497,11 @@ margin: 30px 0;
 .suggest-list .suggest-item a img {
   width: 80px;
   margin-right: 5px;
+}
+
+.suggest-item h4.product-name {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .suggest-item .product-price {
