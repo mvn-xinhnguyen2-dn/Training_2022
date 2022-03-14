@@ -51,8 +51,7 @@ html {
 }
 
 .container {
-  width: 1200px;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   position: relative;
@@ -110,7 +109,7 @@ html {
 }
 
 .col-lg-13 {
-  width: 20.83%;
+  width: 20.82%;
 }
 
 
@@ -124,9 +123,10 @@ html {
   text-align: center;
 }
 
-.header-top a  {
+.header-top a, button  {
   color: var(--text-white-color);
   font-size: 13px;
+  vertical-align: middle;
 }
 
 .header-top a span {
@@ -134,9 +134,11 @@ html {
   font-size: 14px;
 }
 
-.header-top a:last-child {
+.header-top button {
   position: absolute;
   right: 20px;
+  top: 50%;
+  transform: translateY(-50%)
 }
 
 .header-nav {
@@ -188,7 +190,7 @@ html {
 /* 1. section-slide  */
 .slide-show {
   position: relative;
-  color: #fff;
+  color: var(--text-white-color);
   margin-bottom: 20px;
 }
 
@@ -304,7 +306,7 @@ html {
 
 }
 
-.intro-icon {
+.intro i {
   margin: 10px 0;
 }
 
@@ -402,7 +404,7 @@ ul.product-color li:first-child::before {
   line-height: 30px;
 }
 
-.services-icon {
+.services-item i {
   font-size: 30px;
   color: var(--primary-color);
   margin-bottom: 15px;
@@ -460,17 +462,17 @@ ul.product-color li:first-child::before {
 }
 
 .suggest-list {
-margin: 70px 0;
+margin: 30px 0;
 }
 
-.suggest-list .suggest-name {
- margin-bottom: 30px;
+.section-suggest .suggest-name {
+ margin-top: 60px;
  font-size: 18px;
  font-weight: 500;
  position: relative;
 }
 
-p.suggest-name::after {
+.section-suggest p.suggest-name::after {
   content: "";
   border-top: 2px solid var(--black-color);
   width: 60px;
@@ -505,12 +507,13 @@ p.suggest-name::after {
 .footer-page {
   background-color: #1f1e1e;
   position: relative;
-  margin-top: 400px;
+  margin-top: 20px;
 }
 
 .footer-page .footer-top {
   color: var(--text-white-color);
-  height: 300px;
+  position: inherit;
+  padding: 80px 0;
 }
 
 .footer-logo img,
@@ -526,16 +529,17 @@ p.suggest-name::after {
 }
 .form-subscribe input{
   width: 68%;
-  height: 40px;
+  height: 38px;
   margin: 10px 0;
   background-color: rgba(255, 255, 255, 0);
   border: 0.3px solid var(--text-white-color);
+  border-right: none;
   padding-left: 10px;
 }
 
 .btn.submit {
-padding: 12px 25px;
-margin-left: -10px;
+padding: 11px 25px;
+margin-left: -5px;
  color: var(--text-white-color);
  background-color: var(--primary-color);
 }
