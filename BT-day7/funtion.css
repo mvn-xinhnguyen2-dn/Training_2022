@@ -1,0 +1,74 @@
+/* ví dụ về functions : attr(), calc(), rgb(), rgba(), 
+rotate(), scale(), translate(), linear-gradient(). */
+
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.container {
+  width: calc(100% - 200px);
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.box-wrap {
+  counter-reset: element;
+} 
+
+.box-wrap .box p::before {
+  counter-increment: element;
+  content: counter(element) ". ";
+}
+
+.box {
+  width: 300px;
+  height: 150px;
+  margin-right: 20px;
+  margin: 30px;
+  position: relative;
+}
+
+.box p {
+  padding: 0;
+  position: absolute;
+  background-color: brown;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* hình chữ nhật  */
+.box1 {
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+
+/* hình thoi  */
+.box2 {
+ background: rgb(43, 106, 165);
+ transform: rotate(45deg);
+ width: 150px;
+
+}
+
+
+/* hình bình hành  */
+.box3 {
+  background: rgba(146, 62, 23, 0.637);
+  transform: skew(30deg);
+}
+
+
+/* hình tròn  */
+.box4 {
+  height:300px;
+  border-radius: 50%;
+  background-image: url("https://themes.the4.co/kalles-html/assets/images/home-glasses/blog-01.jpg");
+}
+.box4:hover {
+  transform: scale(120%);
+  filter: brightness(0.7);
+}
