@@ -230,8 +230,6 @@ for (i ; i < 19 ; i++) {
   number = 10 * i + 9
   if (number % 3 == 0) {
     output31.push(number.toString())
-  }else{
-    continue
   }
 }
 }
@@ -256,6 +254,40 @@ for (i = 0 ; i < 10 ; ++i){
 }
 numbers2('1234567890*')
 console.log(output32);
+
+// UPDATE thuật toán. sử dụng với mọi input có chứa *, thay thế * để số chia hết cho 3.
+var sumA = 0
+var arrayDivisible3 = []
+function inputDivisble3(a){
+  var toArray = [...a]
+  for (var value of toArray){
+    if (value != "*"){
+      sumA = sumA + parseInt(value)
+    }
+  }
+  switch (sumA%3){
+    case 0:
+    for (i = 0; i < 10; i+=3) {
+      arrayDivisible3.push(a.replace("*",i))
+    }
+    break;
+    case 1:
+    for (i = 2; i < 10; i+=3) {
+      arrayDivisible3.push(a.replace("*",i))
+    }
+    break;
+    case 2:
+    for (i = 1; i < 10; i+=3) {
+      arrayDivisible3.push(a.replace("*",i))
+    }
+    break;
+  }
+}
+inputDivisble3('1*9')
+// inputDivisble3('1234567890*')
+
+console.log("bài 3: cách 2: ")
+console.log(arrayDivisible3)
 
 
 /* 4. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 6.
@@ -303,3 +335,41 @@ for (i = 0 ; i < 10 ; i++){
 }
 numbers4("1234567890*")
 console.log(output42);
+
+
+
+// UPDATE thuật toán. sử dụng với mọi input có chứa *, thay thế * để số chia hết cho 6--> nó là số chia hết cho 3 và là số chẵn
+var sumB = 0
+var arrayDivisible6 = []
+function inputDivisble6(a){
+  var toArray = [...a]
+  for (var value of toArray){
+    if (value != "*"){
+      sumB = sumB + parseInt(value)
+    }
+  }
+  switch (sumB%3){
+    case 0:
+    for (i = 0; i < 10; i+=6) {
+      arrayDivisible6.push(a.replace("*",i))
+    }
+    break;
+    case 1:
+      arrayDivisible6.push(a.replace("*",5))
+    break;
+    case 2:
+      arrayDivisible6.push(a.replace("*",4))
+    break;
+  }
+}
+inputDivisble6('1234567890*')
+
+for (var i in arrayDivisible6){       // loại phần tử lẽ.
+  if (arrayDivisible6[i]%2 != 0){
+    arrayDivisible6.splice(i,1)
+  }
+}
+
+console.log("bài 4: cách 2: ")
+// inputDivisble3('1*9')
+console.log(arrayDivisible6)
