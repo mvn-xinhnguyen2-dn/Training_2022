@@ -221,41 +221,23 @@ Output: ['12345678900',
 '12345678909']
 
 */
-var output31 = []
-
-function numbers1 () {
-var a = 109  //giá trị min thỏa mãn đk
-var i = (a - 9) / 10 
-for (i ; i < 19 ; i++) {
-  number = 10 * i + 9
-  if (number % 3 == 0) {
-    output31.push(number.toString())
+var aDivisible3 = []
+function input3(a){
+  for (var i = 0; i<10 ; i++){
+    if (parseInt(a.replace("*",i))%3 == 0) {
+      aDivisible3.push(a.replace("*",i))
+    }else{
+      continue
+    }
   }
 }
-}
-numbers1('1*9')
-console.log("bài 3: ");
-console.log(output31);
+input3('2*9')
+// input3('1234567890*')
 
-// -----------
+console.log("bài 3: ")
+console.log(aDivisible3)
 
-var output32 = []
-
-function numbers2 () {
-var a = 12345678900  //giá trị min thỏa mãn đk
-for (i = 0 ; i < 10 ; ++i){
-  number = a + i;
-  if ((number % 3 == 0) && (a % 100 + i < 10)){
-    output32.push(number.toString())
-  }else {
-    continue
-  }
-}
-}
-numbers2('1234567890*')
-console.log(output32);
-
-// UPDATE thuật toán. sử dụng với mọi input có chứa *, thay thế * để số chia hết cho 3.
+// UPDATE thuật toán. sử dụng switch case, thay thế * để số chia hết cho 3.
 var sumA = 0
 var arrayDivisible3 = []
 function inputDivisble3(a){
@@ -283,10 +265,9 @@ function inputDivisble3(a){
     break;
   }
 }
-inputDivisble3('1*9')
-// inputDivisble3('1234567890*')
+// inputDivisble3('1*9')
+inputDivisble3('1234567890*')
 
-console.log("bài 3: cách 2: ")
 console.log(arrayDivisible3)
 
 
@@ -299,42 +280,21 @@ Input: a = '1234567890*'
 Output: ['12345678900', 
 '12345678906']
 */
+console.log("bài 4: ")
 
-var output41 = []
-
-function numbers3 () {
-var a = 109  //giá trị min thỏa mãn đk
-var i = (a - 9) / 10
-for (i ; i < 19 ; i++) {
-  number = 10 * i + 9
-  if (number % 6 == 0) {
-    output41.push(number.toString())
-  }else{
-    continue
+var aDivisible6 = []
+function input6(a){
+  for (var i = 0; i<10 ; i++){
+    if (parseInt(a.replace("*",i))%6 == 0) {
+      aDivisible6.push(a.replace("*",i))
+    }else{
+      continue
+    }
   }
 }
-}
-numbers3('1*9');
-console.log("bài 4: ");
-console.log(output41);
-
-// ------------
-
-var output42 = [];
-
-function numbers4 () {
-var a = 12345678900  //giá trị min thỏa mãn đk
-for (i = 0 ; i < 10 ; i++){
-  number = a + i;
-  if ((number % 6 == 0) && (a%100 + i < 10)){
-    output42.push(number.toString())
-  }else {
-    continue
-  }
-}
-}
-numbers4("1234567890*")
-console.log(output42);
+// input6('1*9')
+input6('1234567890*')
+console.log(aDivisible6)
 
 
 
@@ -370,6 +330,5 @@ for (var i in arrayDivisible6){       // loại phần tử lẽ.
   }
 }
 
-console.log("bài 4: cách 2: ")
 // inputDivisble3('1*9')
 console.log(arrayDivisible6)
