@@ -137,19 +137,16 @@ html {
   width: 97px;
 }
 
-.header-nav .menu-logo img {
+.header-nav a.menu-logo {
   display: none;
   width: auto;
   height: 35px;
-}
-
-.header-nav .menu-logo img {
   cursor: pointer;
 }
 
-.header-nav .header-menu-list .menu-nav-item  {
-  display: inline-block;
-  margin-right: 30px;
+.header-nav .header-menu-list{
+  display: flex;
+  gap: 30px
 }
 
 .header-nav .header-menu-list .menu-nav-item a  {
@@ -157,9 +154,9 @@ html {
   font-size: 16px;
 }
 
-.header-nav .nav-icon-list .nav-icon {
-  display: inline-block;
-  margin-left: 20px;
+.header-nav .nav-icon-list {
+  display: flex;
+  gap: 10px;
 }
 
 .brand-logo,
@@ -239,14 +236,14 @@ html {
   bottom: 30px;
   left: 50%;
   transform:translateX(-50%);
+  display: flex;
+  gap:7px
 }
 .slide-pagination li {
   width: 12px;
   height: 13px;
   border-radius: 50%;
   background-color: var(--primary-color);
-  display: inline-block;
-  margin-left: 7px;
 }
 
 /* 2. section model image  */
@@ -312,11 +309,12 @@ html {
 
 .products-colection-list {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .products-colection-list .colection-item {
-   display: inline-block;
-   margin-left: 25px;
    font-size: 18px;
    color: var(--gray-color);
    cursor: pointer;
