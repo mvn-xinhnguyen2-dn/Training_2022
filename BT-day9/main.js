@@ -107,7 +107,7 @@
 
     //filter: tìm kiếm và trả về tất cả các phần tử thõa mãn đk. "ai ở huế?"
 
-    var hueProvince = info.filter(function (info, index){
+    var hueProvince = info.filter(function (info, index) {
       return info.province == "huế"
     })
     console.log("5.2 ví dụ: filter,ai ở huế?")
@@ -115,7 +115,7 @@
 
     // reduce: tính toán trong mảng, tính độ tuổi trung bình.
   
-    var sumAge = info.reduce(function (sum, numAge){
+    var sumAge = info.reduce(function (sum, numAge) {
       return sum + numAge.age
     },0)
     var avgAge = sumAge/info.length
@@ -124,7 +124,7 @@
 
     //find: tìm kiếm phần tử vs đk tương ứng. Đúng--> kq trả đúng phân tử đó, và thoát.
 
-    var isHue = info.find( function (info, index){
+    var isHue = info.find( function (info, index) {
       return info.province == "huế"
     })
     console.log("5.4 ví dụ: find,, có aj ở huế k?")
@@ -133,7 +133,7 @@
 
     //some: chỉ cần 1 phần tử thõa mãn--> true
 
-    var over20 = info.some( function (info, index){
+    var over20 = info.some( function (info, index) {
       return info.age > 20
     })
     console.log("5.5 ví dụ: some, có người trên 20 tuổi?")
@@ -298,9 +298,9 @@ var output42 = [];
 
 function numbers4 () {
   var a = 12345678900  //giá trị min thỏa mãn đk
-  for (i = 0 ; i < 10 ; i++){
+  for (i = 0 ; i < 10 ; i++) {
     number = a + i;
-    if ((number % 6 == 0) && (a%100 + i < 10)){
+    if ((number % 6 == 0) && (a%100 + i < 10)) {
       output42.push(number.toString())
     }else {
       continue
