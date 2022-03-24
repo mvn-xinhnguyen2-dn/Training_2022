@@ -125,35 +125,8 @@
   console.log(number.constructor)
 
 /* 7. Modules
-  - ES5
-  ```
-  //  lib/utils.js
-  Utils = {};
-  Utils.sum = function(x, y) { return x + y };
-  Utils.pi = 3.141593;
-​
-  //  someApp.js
-  var math = Utils;
-  console.log("2π = " + math.sum(math.pi, math.pi));
-​
-  //  otherApp.js
-  var sum = Utils.sum, pi = Utils.pi;
-  console.log('2π = ' + sum(pi, pi));
-  ```*/
 
-  //  lib/utils.js
-  export function sum(x, y) { return x + y }
-  export var pi = 3.141593
-
-  //  someApp.js
-  import * as math from "lib/utils.js"
-  console.log(`2π = ${math.sum(math.pi, math.pi)}`)
-
-  //  otherApp.js
-  import {sum, pi} from "lib/utils.js"
-  console.log(`2π = ${sum(pi, pi)}`)
-
-/* 8. Promise
+8. Promise
   - ES5
   ```
   function showMessAfterTimeout(msg, who, timeout, onDone) {
