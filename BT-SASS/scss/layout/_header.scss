@@ -1,9 +1,10 @@
 .header-top {
   padding: 12px 20px;
   background-color: map-get($colors, primary-color);
-  @include flexJustify (space-between);
+  @include flexJustify(space-between);
   text-align: center;
-  a, button {
+  a,
+  button {
     color: map-get($colors, text-white-color);
     font-size: 13px;
   }
@@ -19,7 +20,7 @@
   padding: 20px 20px 12px 25px;
   line-height: 24px;
   vertical-align: middle;
-  @include flexJustify (space-between);
+  @include flexJustify(space-between);
   .brand-logo {
     img {
       width: 97px;
@@ -31,7 +32,7 @@
     display: none;
     width: auto;
     height: 35px;
-    cursor: pointer;    
+    cursor: pointer;
   }
   .header-menu-list {
     @include flexGap(30px);

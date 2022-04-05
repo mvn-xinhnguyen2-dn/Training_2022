@@ -1,13 +1,13 @@
 .header-nav {
   .nav-icon-list {
-    @include flexGap (10px);
+    @include flexGap(10px);
     .nav-icon {
       line-height: 30px;
       vertical-align: middle;
       i:hover {
         color: map-get($colors, primary-color);
       }
-    }    
+    }
   }
 }
 

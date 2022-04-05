@@ -7,7 +7,8 @@
     position: inherit;
     padding: 80px 0;
     .footer-logo {
-      img, .footer-title {
+      img,
+      .footer-title {
         margin: 0 0 20px 0;
       }
     }
@@ -27,8 +28,8 @@
     display: block;
     margin: 10px 0;
     padding: 20px 0;
-    .footer-bottom-item{
-      @include flexJustify (space-between);
+    .footer-bottom-item {
+      @include flexJustify(space-between);
       color: map-get($colors, text-white-color);
       span {
         color: map-get($colors, primary-color);
@@ -51,7 +52,7 @@
   font-size: 14;
 }
 
-.form-subscribe input{
+.form-subscribe input {
   width: 65%;
   height: 38px;
   margin: 10px 0;

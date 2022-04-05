@@ -6,7 +6,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
-ol, ul, li {
+ol,
+ul,
+li {
   list-style-type: none;
   color: inherit; }
 
@@ -23,7 +25,7 @@ button {
 
 html {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: var(--black-color); }
 
@@ -132,7 +134,8 @@ img {
   display: flex;
   justify-content: space-between;
   text-align: center; }
-  .header-top a, .header-top button {
+  .header-top a,
+  .header-top button {
     color: #eff4f8;
     font-size: 13px; }
   .header-top a span {
@@ -370,7 +373,8 @@ img {
     color: #eff4f8;
     position: inherit;
     padding: 80px 0; }
-    .footer-page .footer-top .footer-logo img, .footer-page .footer-top .footer-logo .footer-title {
+    .footer-page .footer-top .footer-logo img,
+    .footer-page .footer-top .footer-logo .footer-title {
       margin: 0 0 20px 0; }
     .footer-page .footer-top .footer-nav-list li a:hover {
       color: aqua; }

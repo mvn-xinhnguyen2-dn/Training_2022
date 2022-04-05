@@ -19,7 +19,7 @@
 
 .products-colection-list {
   margin-bottom: 20px;
-  @include flexGap (30px);
+  @include flexGap(30px);
   justify-content: center;
   .colection-item {
     font-size: 18px;

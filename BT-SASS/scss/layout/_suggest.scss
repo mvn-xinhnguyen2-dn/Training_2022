@@ -1,6 +1,6 @@
 .section-suggest {
   .container {
-    @include boderSection (1px solid #ddd, none);
+    @include boderSection(1px solid #ddd, none);
   }
   .suggest-name {
     margin-top: 60px;
@@ -9,18 +9,18 @@
     position: relative;
     display: inline-block;
   }
-   .suggest-name::after {
+  .suggest-name::after {
     content: "";
     border-top: 2px solid map-get($colors, black-color);
     width: 60px;
     height: 1px;
-    @include positionAbs (30px, 0);
+    @include positionAbs(30px, 0);
   }
 }
 
 .suggest-list {
   margin: 30px 0;
-  .suggest-item  {
+  .suggest-item {
     display: flex;
     font-size: 14px;
     line-height: 30px;

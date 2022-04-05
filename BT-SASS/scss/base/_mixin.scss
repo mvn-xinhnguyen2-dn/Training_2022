@@ -1,20 +1,20 @@
-@mixin positionAbs ($top, $left) {
-  position:absolute;
+@mixin positionAbs($top, $left) {
+  position: absolute;
   top: $top;
   left: $left;
 }
 
-@mixin boderSection ($borderTop, $borderBottom) {
+@mixin boderSection($borderTop, $borderBottom) {
   border-top: $borderTop;
   border-bottom: $borderBottom;
 }
 
-@mixin flexGap ($gap) {
+@mixin flexGap($gap) {
   display: flex;
   gap: $gap;
 }
 
-@mixin flexJustify ($justify) {
+@mixin flexJustify($justify) {
   display: flex;
   justify-content: $justify;
 }
