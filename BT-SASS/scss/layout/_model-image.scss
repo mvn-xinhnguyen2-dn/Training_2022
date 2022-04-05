@@ -1,0 +1,25 @@
+.model-list {
+  position: inherit;
+  margin-bottom: 60px;
+  .model-item {
+    position: inherit;
+    img {
+      width: 100%;
+      }
+    .model-text {
+      @include positionAbs (25%, none);
+      right: 40px;
+      text-align: right;
+    }
+  }}
+
+.model-text {
+  .item-shape {
+    color: map-get($colors, primary-color);
+    font-size: 30px;
+    font-style: italic;
+  }
+  .item-kind {
+  font-size: 35px;
+  }
+}

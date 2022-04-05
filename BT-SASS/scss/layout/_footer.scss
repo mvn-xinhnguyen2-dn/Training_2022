@@ -1,0 +1,62 @@
+.footer-page {
+  background-color: #1f1e1e;
+  position: relative;
+  margin-top: 20px;
+  .footer-top {
+    color: map-get($colors, text-white-color);
+    position: inherit;
+    padding: 80px 0;
+    .footer-logo {
+      img, .footer-title {
+        margin: 0 0 20px 0;
+      }
+    }
+    .footer-nav-list {
+      li a:hover {
+        color: aqua;
+      }
+    }
+  }
+  .footer-top-responsive {
+    .nav-responsive {
+      display: none;
+    }
+  }
+  .footer-bottom {
+    background-color: black;
+    display: block;
+    margin: 10px 0;
+    padding: 20px 0;
+    .footer-bottom-item{
+      @include flexJustify (space-between);
+      color: map-get($colors, text-white-color);
+      span {
+        color: map-get($colors, primary-color);
+      }
+      .footer-menu li {
+        display: inline-block;
+        margin-left: 20px;
+        a:hover {
+          color: aqua;
+        }
+      }
+    }
+  }
+}
+
+.info,
+.footer-nav-list li,
+.signup {
+  line-height: 30px;
+  font-size: 14;
+}
+
+.form-subscribe input{
+  width: 65%;
+  height: 38px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.3px solid map-get($colors, text-white-color);
+  border-right: none;
+  padding-left: 10px;
+}

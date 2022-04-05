@@ -1,0 +1,36 @@
+.slide-show {
+  position: relative;
+  color: map-get($colors, text-white-color);
+  margin-bottom: 20px;
+  img {
+    filter: brightness(0.7);
+    height: 700px;
+    width: 100%;
+  }
+}
+
+.slide-content {
+  text-align: center;
+  @include positionAbs (50%, 50%);
+  transform: translate(-50%, -50%);
+  .slide-title {
+    font-size: 65px;
+  }
+  p {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+}
+
+.slide-pagination {
+  bottom: 30px;
+  @include positionAbs (none, 50%);
+  transform: translate(-50%);
+  @include flexGap(7px);
+  li {
+    width: 12px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: map-get($colors, primary-color);
+  }
+}

@@ -1,0 +1,50 @@
+.header-top {
+  padding: 12px 20px;
+  background-color: map-get($colors, primary-color);
+  @include flexJustify (space-between);
+  text-align: center;
+  a, button {
+    color: map-get($colors, text-white-color);
+    font-size: 13px;
+  }
+  a {
+    span {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+
+.header-nav {
+  padding: 20px 20px 12px 25px;
+  line-height: 24px;
+  vertical-align: middle;
+  @include flexJustify (space-between);
+  .brand-logo {
+    img {
+      width: 97px;
+    }
+    line-height: 30px;
+    vertical-align: middle;
+  }
+  .menu-logo {
+    display: none;
+    width: auto;
+    height: 35px;
+    cursor: pointer;    
+  }
+  .header-menu-list {
+    @include flexGap(30px);
+    .menu-nav-item {
+      line-height: 30px;
+      vertical-align: middle;
+    }
+    .menu-nav-item a {
+      color: map-get($colors, black-color);
+      font-size: 16px;
+    }
+    .menu-nav-item a:hover {
+      color: map-get($colors, primary-color);
+    }
+  }
+}

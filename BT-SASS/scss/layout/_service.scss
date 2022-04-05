@@ -1,0 +1,22 @@
+.section-services {
+  .container {
+    @include boderSection (1px solid #ddd, 1px solid #ddd);
+  }
+}
+
+.services-list {
+  vertical-align: baseline;
+  .services-item {
+    text-align: center;
+    margin: 80px 0;
+    line-height: 30px;
+    .title {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .services-text {
+      color: map-get($colors, gray-color);
+      font-weight: 300;
+    }
+  }
+}
