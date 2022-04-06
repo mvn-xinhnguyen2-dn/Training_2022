@@ -445,7 +445,8 @@ img {
   .header-nav .nav-icon-list {
     display: none; }
   .header-nav .menu-logo img {
-    display: block; }
+    display: block;
+    width: 35px; }
   .slide-content {
     display: flex;
     justify-content: center;
@@ -481,6 +482,8 @@ img {
   .header-top,
   .footer-top {
     display: none; }
+  .header-nav .menu-logo {
+    display: block; }
   .wrap {
     flex-wrap: wrap; }
   .model-list .model-item .model-text {
