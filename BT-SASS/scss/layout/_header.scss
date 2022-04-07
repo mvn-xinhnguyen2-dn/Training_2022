@@ -1,7 +1,7 @@
 .header-top {
+  @include flexJustify(space-between);
   padding: 12px 20px;
   background-color: map-get($colors, primary-color);
-  @include flexJustify(space-between);
   text-align: center;
   a,
   button {
@@ -17,10 +17,10 @@
 }
 
 .header-nav {
+  @include flexJustify(space-between);
   padding: 20px 20px 12px 25px;
   line-height: 24px;
   vertical-align: middle;
-  @include flexJustify(space-between);
   .brand-logo {
     img {
       width: 97px;

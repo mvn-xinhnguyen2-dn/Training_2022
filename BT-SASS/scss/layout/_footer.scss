@@ -44,20 +44,20 @@
     }
   }
 }
-
 .info,
 .footer-nav-list li,
 .signup {
   line-height: 30px;
   font-size: 14;
 }
-
-.form-subscribe input {
-  width: 65%;
-  height: 38px;
-  margin: 10px 0;
-  background-color: rgba(255, 255, 255, 0);
-  border: 0.3px solid map-get($colors, text-white-color);
-  border-right: none;
-  padding-left: 10px;
+.form-subscribe {
+  input {
+    width: 65%;
+    height: 38px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.3px solid map-get($colors, text-white-color);
+    border-right: none;
+    padding-left: 10px;
+  }
 }

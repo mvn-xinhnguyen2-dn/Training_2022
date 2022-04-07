@@ -8,3 +8,19 @@ $colors: (
   gray-color: #a3a1a1,
   yellow-color: #e1eb78,
 );
+$font-weight: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semiBold: 600,
+  bold: 700
+);
+
+// == Breakpoints === //
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px
+);
