@@ -1,0 +1,61 @@
+.wrap {
+  @include flexGap(0 30px);
+}
+
+// Mixins for build grid
+$grid-columns: 12;
+@mixin build-grid($size) {
+  @for $i from 1 through $grid-columns {
+    @if $size != '' {
+      .col-#{$size}-#{$i} {
+        width: percentage($i / $grid-columns);
+      }
+    } @else {
+      .col-#{$i} {
+        width: percentage($i / $grid-columns);
+      }
+    }
+  }
+}
+
+ @include build-grid("lg");
+
+.col-lg-13 {
+  width: 20.82%;
+}
+
+// End mixins for build grid
+$grid-gutter: 0 -15px;
+$container-width: 1200px;
+.container {
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  margin: 0 auto;
+  max-width: $container-width;
+  position: relative;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$grid-gutter;
+  > [class*="col-"] {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+  }
+  &::after,
+  &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Remove gutters (margin, padding) of row & col
+.row-no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+  > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

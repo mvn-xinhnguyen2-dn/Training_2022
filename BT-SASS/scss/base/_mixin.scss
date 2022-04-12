@@ -1,0 +1,35 @@
+@mixin positionAbs($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin boderSection($borderTop, $borderBottom) {
+  border-top: $borderTop;
+  border-bottom: $borderBottom;
+}
+@mixin borderButton() {
+  background-color: map-get($colors, primary-color);
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+@mixin flexGap($gap) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin flexJustify($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+// === RESPOND BELOW ===
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
