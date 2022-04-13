@@ -103,8 +103,6 @@ function App() {
                   <a href="./index.html" className="item-detail">
                     <img src="https://themes.the4.co/kalles-html/assets/images/home-glasses/pr-14.jpg" alt=""/>
                     <span className="quick-link">
-                      <a href="./index.html"><i/></a>
-                      <a href="./index.html"><i/></a>
                     </span>
                     <h4 className="product-name">Vintage Aviator Sunglasses</h4>
                     <p className="product-price">$155.00</p>
@@ -119,8 +117,6 @@ function App() {
                   <a href="./index.html" className="item-detail">
                     <img src="https://themes.the4.co/kalles-html/assets/images/home-glasses/pr-14.jpg" alt=""/>
                     <span className="quick-link">
-                      <a href="./index.html"><i/></a>
-                      <a href="./index.html"><i/></a>
                     </span>
                     <h4 className="product-name">Miu Miu/Core Collection MU 08RS</h4>
                     <p className="product-price">$450.00</p>
@@ -130,8 +126,6 @@ function App() {
                   <a href="./index.html" className="item-detail">
                     <img src="https://themes.the4.co/kalles-html/assets/images/home-glasses/pr-14.jpg" alt=""/>
                     <span className="quick-link">
-                      <a href="./index.html"><i/></a>
-                      <a href="./index.html"><i/></a>
                     </span>
                     <h4 className="product-name">Miu Miu/Core Collection MU 59US</h4>
                     <p className="product-price">$388.00</p>
@@ -141,8 +135,6 @@ function App() {
                   <a href="./index.html" className="item-detail">
                     <img src="https://themes.the4.co/kalles-html/assets/images/home-glasses/pr-14.jpg" alt=""/>
                     <span className="quick-link">
-                      <a href="./index.html"><i/></a>
-                      <a href="./index.html"><i/></a>
                     </span>
                     <h4 className="product-name">Ray-Ban/Hexagonal Flat Lenses</h4>
                     <p className="product-price">$205.00 – $259.00</p>
