@@ -1,0 +1,29 @@
+.btn {
+  padding: #{f-pxRem(15)} #{f-pxRem(30)};
+  border: 2px solid;
+  margin-left: #{f-pxRem(10)};
+  &.close {
+    border: none;
+    padding: 0;
+  }
+  &.primary {
+    @include borderButton;
+  }
+  &:hover {
+    filter: opacity(0.8);
+  }
+  &.nocolor {
+    &:hover {
+      @include borderButton;
+      filter: opacity(0.8);
+    }
+  }
+  &.submit {
+    padding: #{f-pxRem(11)} #{f-pxRem(25)};
+    margin-left: -5px;
+    color: map-get($colors, text-white-color);
+    background-color: map-get($colors, primary-color);
+    width: #{f-pxRem(105)};
+    border: none;
+  }
+}

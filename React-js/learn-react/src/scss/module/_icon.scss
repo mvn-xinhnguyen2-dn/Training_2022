@@ -1,0 +1,22 @@
+.nav-icon-list {
+  @include flexGap(10px);
+  .nav-icon {
+    line-height: 30px;
+    vertical-align: middle;
+    i:hover {
+      color: map-get($colors, primary-color);
+    }
+  }
+}
+.intro {
+  i {
+    margin: 10px 0;
+  }
+}
+.services-item {
+  i {
+    font-size: 30px;
+    color: map-get($colors, primary-color);
+    margin-bottom: 15px;
+  }
+}
