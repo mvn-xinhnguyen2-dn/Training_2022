@@ -1,19 +1,21 @@
 import Header from "./components/Header";
 import Slide from "./components/Slide";
-import Baner from "./components/Baner";
-import Product from "./components/Product";
-import Service from "./components/Service";
-import News from "./components/News";
-import Suggest from "./components/Suggest";
+import Banner from "./components/Banners/Banner";
+import Product from "./components/Products/Product";
+import Service from "./components/Services/Service";
+import News from "./components/News/News";
+import Suggest from "./components/Suggests/Suggest";
 import Footer from "./components/Footer";
+import React, { Component } from 'react'
 
-function App() {
-  return (
+export default class App extends Component {
+  render() {
+    return (
     <>
       <Header />
       <main className="main-page">
         <Slide />
-        <Baner />
+        <Banner />
         <Product />
         <Service />
         <News />
@@ -21,7 +23,6 @@ function App() {
       </main>
       <Footer />
     </>
-  );
+    )
+  }
 }
-
-export default App;
