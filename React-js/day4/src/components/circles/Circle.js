@@ -6,22 +6,34 @@ export default class Circle extends Component {
     this.state = {
       current: "Start",
       times: this.props.times,
+      size: this.props.size,
+      color: "green",
     };
     this.start = this.start.bind(this);
   }
 
   start() {
-    // document.querySelector(`.circle.c${this.props.times}`).classList.add("active")
-    document.querySelector(`.circle.c${this.state.times}`).classList.add("active")
     if (this.state.current === "Start") {
-      this.timerID = setInterval(() => {
-        this.setState({ times: this.state.times - 1 });
-      }, 1000);
-      this.setState({ current: "Stop" });
+      this.startTimer();
+      this.setState({
+        current: "Stop",
+        color: "red",
+      });
     } else {
-      this.setState({ current: "Start" });
+      this.setState({
+        current: "Start",
+        color: "green",
+      });
       clearInterval(this.timerID);
     }
+  }
+  startTimer() {
+    this.timerID = setInterval(() => {
+      this.setState({
+        times: this.state.times - 1,
+        size: this.state.size - 1,
+      });
+    }, 1000);
   }
 
   componentDidUpdate() {
@@ -37,12 +49,17 @@ export default class Circle extends Component {
   render() {
     return (
       <div>
-        <button 
-          className={this.state.current}
-          onClick={this.start}>{this.state.current}
+        <button className={this.state.current} onClick={this.start}>
+          {this.state.current}
         </button>
-        <div className={`circle c${this.state.times}`}>
-            <p>{this.state.times}</p>
+        <div
+          className={`circle ${this.state.color}`}
+          style={{
+            width: `${this.state.size}px`,
+            height: `${this.state.size}px`,
+          }}
+        >
+          <p>{this.state.times}</p>
         </div>
       </div>
     );

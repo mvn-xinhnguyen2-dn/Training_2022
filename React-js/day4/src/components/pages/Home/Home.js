@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Circle from '../../circles/Circle'
+import React, { Component } from "react";
+import Circle from "../../circles/Circle";
 
 export default class Home extends Component {
   render() {
@@ -7,11 +7,11 @@ export default class Home extends Component {
       <>
         <h2>This is Home page</h2>
         <div className="timer">
-          <Circle times='50'/>
-          <Circle times='40'/>
-          <Circle times='30'/>
+          <Circle times="50" size="100" />
+          <Circle times="40" size="80" />
+          <Circle times="30" size="50" />
         </div>
       </>
-    )
+    );
   }
 }

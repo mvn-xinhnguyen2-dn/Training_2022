@@ -4,7 +4,7 @@
 .App .header {
   padding-left: 100px;
   text-align: left;
-  background: #20204f; 
+  background: #20204f;
   margin-bottom: 20px;
 }
 
@@ -19,8 +19,13 @@
   margin: 20px;
 }
 
-.App .header button:first-child {
+.App .header button:first-child,
+.App .header button.active {
   color: aqua;
+}
+
+.App .header button.none {
+  color: white;
 }
 
 button:hover {
@@ -62,7 +67,7 @@ button:hover {
   }
 }
 
-.timer{
+.timer {
   display: flex;
   justify-content: center;
 }
@@ -70,7 +75,7 @@ button:hover {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color:aqua;
+  background-color: aqua;
   border: 2px solid;
   position: relative;
   margin: 0 20px;
@@ -83,10 +88,10 @@ button:hover {
   margin: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-div>button {
+div > button {
   margin: 20px;
   padding: 5px 15px;
   background: #050506;
@@ -97,11 +102,10 @@ div>button {
   background-color: none;
 }
 
-.Stop {
-  background-color:red;
+.Stop,
+.red {
+  background-color: red;
 }
-.c50, .c40 , .c30,
-.active {
-  background-color:rgb(0, 255, 119);
+.green {
+  background-color: rgb(0, 255, 119);
 }
-
