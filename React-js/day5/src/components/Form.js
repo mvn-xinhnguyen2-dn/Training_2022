@@ -81,6 +81,7 @@ export default class Form extends Component {
               name="userName"
               onChange={this.handleOnChange}
               value={this.state.userName}
+              required
             />
           </div>
           <div>
@@ -91,6 +92,7 @@ export default class Form extends Component {
               name="password"
               onChange={this.handleOnChange}
               value={this.state.password}
+              required
             />
           </div>
           <div>
@@ -103,6 +105,7 @@ export default class Form extends Component {
                 value="0"
                 onChange={this.handleOnChange}
                 checked={this.state.gender === "0"}
+                required
               />
               <label htmlFor="male">Male</label>
               <input
@@ -112,6 +115,7 @@ export default class Form extends Component {
                 value="1"
                 onChange={this.handleOnChange}
                 checked={this.state.gender === "1"}
+                required
               />
               <label htmlFor="female">Female</label>
             </div>
@@ -122,6 +126,7 @@ export default class Form extends Component {
               name="city"
               onChange={this.handleOnChange}
               value={this.state.city}
+              required
             >
               <option value="London">London</option>
               <option value="Paris">Paris</option>
@@ -134,6 +139,7 @@ export default class Form extends Component {
               name="message"
               onChange={this.handleOnChange}
               value={this.state.message}
+              required
             />
           </div>
           <div>
@@ -145,6 +151,7 @@ export default class Form extends Component {
               onChange={this.handleOnChange}
               value={true}
               checked={this.state.agree === true}
+              required
             />
           </div>
           <button className="btn-submit" type="submit">
