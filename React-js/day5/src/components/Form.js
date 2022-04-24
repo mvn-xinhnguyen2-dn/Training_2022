@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TableUsers from "./TableUsers";
+import Popup from "./Popup";
 
 export default class Form extends Component {
   constructor(props) {
@@ -13,8 +14,12 @@ export default class Form extends Component {
       message: "",
       agree: false,
       userList: [],
+      popupActive: "none",
+      rowId: "",
     };
   }
+
+  //Get input value.
   handleOnChange = (event) => {
     var target = event.target;
     var name = target.name;
@@ -23,50 +28,48 @@ export default class Form extends Component {
       [name]: value,
     });
   };
+
+  //Submit form and save user into userList.
   handleOnSubmit = (event) => {
-  // handleOnSubmit = (event, {resetForm}) => {
     event.preventDefault();
     this.state.userList.push(this.state);
     this.setState({
       id: `id${Math.floor(Math.random() * 1000) + 1}`,
       userList: this.state.userList,
     });
-    // resetForm({value:''})
+    //Reset form
+    this.setState({
+      userName: "",
+      password: "",
+      gender: "0",
+      city: "London",
+      message: "",
+      agree: false,
+    });
   };
 
-  handleDelete = (row) => {
-    console.log(row);
-    console.log("ok");
-    if (window.confirm("Are you sure")) {
-      this.setState({
-        userList: this.state.userList.filter(function (e) {
-          return e.id !== row;
-        }),
-      });
-    }
-    console.log(this.state.userList);
+  //Active popup, delete user, close popup.
+  handlePopupDelete = (row) => {
+    this.setState({
+      popupActive: "popup-active",
+      rowId: row,
+    });
   };
+  deleteUser = (rowId) => {
+    this.setState({
+      popupActive: "none",
+      userList: this.state.userList.filter(function (e) {
+        return e.id !== rowId;
+      }),
+    });
+  };
+  handlePopupClose() {
+    this.setState({
+      popupActive: "none",
+    });
+  }
 
   render() {
-    let element = this.state.userList.map((user, index) => {
-      let result = "";
-      result = (
-        <tr key={user.id} id={user.id}>
-          <TableUsers
-            id={user.id}
-            userName={user.userName}
-            password={user.password}
-            gender={user.gender === "0" ? "Male" : "Female"}
-            city={user.city}
-            message={user.message}
-          />
-          <td>
-            <button onClick={(e) => this.handleDelete(user.id)}>Delete</button>
-          </td>
-        </tr>
-      );
-      return result;
-    });
     return (
       <div className="container">
         <form onSubmit={this.handleOnSubmit} id="register">
@@ -78,7 +81,6 @@ export default class Form extends Component {
               name="userName"
               onChange={this.handleOnChange}
               value={this.state.userName}
-              required
             />
           </div>
           <div>
@@ -89,10 +91,8 @@ export default class Form extends Component {
               name="password"
               onChange={this.handleOnChange}
               value={this.state.password}
-              required
             />
           </div>
-
           <div>
             <label>Gender:</label>
             <div>
@@ -103,7 +103,6 @@ export default class Form extends Component {
                 value="0"
                 onChange={this.handleOnChange}
                 checked={this.state.gender === "0"}
-                required
               />
               <label htmlFor="male">Male</label>
               <input
@@ -113,19 +112,16 @@ export default class Form extends Component {
                 value="1"
                 onChange={this.handleOnChange}
                 checked={this.state.gender === "1"}
-                required
               />
               <label htmlFor="female">Female</label>
             </div>
           </div>
-
           <div>
             <label>City:</label>
             <select
               name="city"
               onChange={this.handleOnChange}
               value={this.state.city}
-              required
             >
               <option value="London">London</option>
               <option value="Paris">Paris</option>
@@ -138,7 +134,6 @@ export default class Form extends Component {
               name="message"
               onChange={this.handleOnChange}
               value={this.state.message}
-              required
             />
           </div>
           <div>
@@ -150,27 +145,22 @@ export default class Form extends Component {
               onChange={this.handleOnChange}
               value={true}
               checked={this.state.agree === true}
-              required
             />
           </div>
           <button className="btn-submit" type="submit">
             Submit
           </button>
         </form>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>User name</th>
-              <th>Password</th>
-              <th>Gender</th>
-              <th>City</th>
-              <th className="col-message">Message</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="insert-user-table">{element}</tbody>
-        </table>
+        <TableUsers
+          userList={this.state.userList}
+          handlePopupDelete={(row) => this.handlePopupDelete(row)}
+        />
+        <Popup
+          popupActive={this.state.popupActive}
+          deleteUser={(e) => this.deleteUser(this.state.rowId)}
+          handlePopupClose={(e) => this.handlePopupClose(e)}
+          rowId={this.state.rowId}
+        />
       </div>
     );
   }

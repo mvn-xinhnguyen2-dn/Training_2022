@@ -1,16 +1,31 @@
 import React, { Component } from "react";
+import ItemUsers from "./ItemUsers";
 
 export default class TableUsers extends Component {
   render() {
-    const { id, userName, password, gender, city, message } = this.props;
+    const { userList, handlePopupDelete } = this.props;
     return (
       <>
-        <td>{id}</td>
-        <td>{userName}</td>
-        <td>{password}</td>
-        <td>{gender}</td>
-        <td>{city}</td>
-        <td className="col-message">{message}</td>
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>ID</th>
+              <th>User name</th>
+              <th>Password</th>
+              <th>Gender</th>
+              <th>City</th>
+              <th className="col-message">Message</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="insert-user-table">
+            <ItemUsers
+              userList={userList}
+              handlePopupDelete={(row) => handlePopupDelete(row)}
+            />
+          </tbody>
+        </table>
       </>
     );
   }
