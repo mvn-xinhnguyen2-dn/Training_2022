@@ -142,3 +142,42 @@ tr:hover {
 .col-message {
   width: 300px;
 }
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-item {
+  display: flex;
+  margin: 20px 10px;
+  align-items: center;
+  box-shadow: 0 0.1px 12px 0 rgb(0 0 0 / 25%);
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.user-item:hover {
+  box-shadow: 0 0.1px 12px 0 rgba(47, 145, 195, 0.668);
+}
+
+.user-item.col-4 {
+  width: 30%;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  margin-left: 5px;
+  object-fit: cover;
+}
+
+.page-number {
+  margin: 0 auto;
+  width: 150px;
+}
+
+button.active {
+  background-color: #00676b;
+  color: white;
+}
