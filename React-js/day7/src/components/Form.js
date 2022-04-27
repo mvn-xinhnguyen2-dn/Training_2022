@@ -1,56 +1,50 @@
 import React, { useState } from "react";
 import TableUsers from "./TableUsers";
+import useField from "./useField";
 
 export default function Form() {
-  const [inputValue, setInputValue] = useState({
-    id: "id1",
-    userName: "",
-    password: "",
-    gender: "0",
-    city: "London",
-    message: "",
-    agree: false,
-    userList: [],
-  });
+  const username = useField("");
+  const password = useField("password");
+  const gender = useField("radio");
+  const city = useField("");
+  const message = useField("");
+  const agree = useField("checkbox");
 
-  const handleOnChange = (event) => {
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
-    setInputValue({
-      ...inputValue,
-      [name]: value,
-    });
-  };
+  const [userList, setUserList] = useState([]);
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
     event.target.reset();
-    inputValue.userList.push(inputValue);
-    setInputValue({
-      ...inputValue,
-      id: `id${Math.floor(Math.random() * 1000) + 1}`,
-      userList: inputValue.userList,
-    });
+    const id = `id${Math.floor(Math.random() * 1000) + 1}`;
+    const userInfo = {
+      id,
+      username: username.inputValue,
+      password: password.inputValue,
+      gender: gender.inputValue,
+      city: city.inputValue,
+      message: message.inputValue,
+      agree: agree.inputValue,
+    };
+    setUserList([...userList, userInfo]);
   };
 
   const handleDelete = (row) => {
     if (window.confirm("Are you sure")) {
-      setInputValue({
-        userList: inputValue.userList.filter(function (e) {
+      setUserList(
+        userList.filter(function (e) {
           return e.id !== row;
-        }),
-      });
+        })
+      );
     }
   };
 
-  let element = inputValue.userList.map((user) => {
+  let element = userList.map((user) => {
     let result = "";
     result = (
       <tr key={user.id} id={user.id}>
         <TableUsers
           id={user.id}
-          userName={user.userName}
+          username={user.username}
           password={user.password}
           gender={user.gender === "0" ? "Male" : "Female"}
           city={user.city}
@@ -69,62 +63,28 @@ export default function Form() {
       <form onSubmit={handleOnSubmit} id="register">
         <div>
           <label htmlFor="userName">User name:</label>
-          <input
-            id="userName"
-            type="text"
-            name="userName"
-            onChange={handleOnChange}
-            value={inputValue.userName}
-            required
-          />
+          <input {...username} id="userName" name="userName" required />
         </div>
 
         <div>
           <label htmlFor="password">Password:</label>
-          <input
-            id="password"
-            type="password"
-            name="password"
-            onChange={handleOnChange}
-            value={inputValue.password}
-            required
-          />
+          <input {...password} id="password" name="password" required />
         </div>
 
         <div>
           <label>Gender:</label>
           <div>
-            <input
-              id="male"
-              type="radio"
-              name="gender"
-              value="0"
-              onChange={handleOnChange}
-              checked={inputValue.gender === "0"}
-              required
-            />
+            <input {...gender} id="male" name="gender" value="0" required />
             <label htmlFor="male">Male</label>
-            <input
-              id="female"
-              type="radio"
-              name="gender"
-              value="1"
-              onChange={handleOnChange}
-              checked={inputValue.gender === "1"}
-              required
-            />
+            <input {...gender} id="female" name="gender" value="1" required />
             <label htmlFor="female">Female</label>
           </div>
         </div>
 
         <div>
           <label>City:</label>
-          <select
-            name="city"
-            onChange={handleOnChange}
-            value={inputValue.city}
-            required
-          >
+          <select {...city} name="city" required>
+            <option value="">Choose city</option>
             <option value="London">London</option>
             <option value="Paris">Paris</option>
           </select>
@@ -132,26 +92,12 @@ export default function Form() {
 
         <div>
           <label>Message:</label>
-          <textarea
-            cols="30"
-            name="message"
-            onChange={handleOnChange}
-            value={inputValue.message}
-            required
-          />
+          <textarea {...message} cols="30" name="message" required />
         </div>
 
         <div>
           <label htmlFor="agree"> Are you agree?</label>
-          <input
-            id="agree"
-            type="checkbox"
-            name="agree"
-            onChange={handleOnChange}
-            value={true}
-            checked={inputValue.agree === true}
-            required
-          />
+          <input {...agree} id="agree" name="agree" required />
         </div>
         <button className="btn-submit" type="submit">
           Submit
