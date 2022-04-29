@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import UserItem from "../../components/modules/UserItem/UserItem";
 
 export default function UserList() {
   const [dataList, setDataList] = useState([]);
@@ -21,16 +22,7 @@ export default function UserList() {
         {dataList.map((user) => {
           let userItem = "";
           userItem = (
-            <li key={user.id} className="user-item my-20 mx-10 p-10 flex col-4">
-              <img className="mr-10 ml-5" src={user.avatar} alt="" />
-              <div>
-                <p>ID: {user.id}</p>
-                <p>
-                  Fullname: {user.first_name} {user.last_name}
-                </p>
-                <p>Email: {user.email}</p>
-              </div>
-            </li>
+            <UserItem user = {user}/>
           );
           return userItem;
         })}
