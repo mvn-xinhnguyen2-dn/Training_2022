@@ -1,15 +1,16 @@
 import { useState } from "react";
 
-export default function useField() {
-  const useField = ({ type }) => {
-    const [value, setValue] = useState("");
-    const onChange = (event) => {
-      setValue(event.target.value);
-    };
-    return {
-      type,
-      value,
-      onChange,
-    };
+export default function useField(type) {
+  const [inputValue, setInputValue] = useState("");
+  const handleOnChange = (event) => {
+    const target = event.target;
+    const inputValue =
+      target.type === "checkbox" ? target.checked : target.value;
+    setInputValue(inputValue);
+  };
+  return {
+    type,
+    inputValue,
+    onChange: handleOnChange,
   };
 }
