@@ -1,0 +1,42 @@
+.page-header {
+  @include pxRem(padding, 10);
+  background: map-get($colors, bg-gray);
+  text-align: center;
+}
+.header-page {
+  background-color: black;
+  padding: 10px 0;
+  color: whitesmoke;
+  .container {
+    .header-logo {
+      img {
+        width: 50px;
+      }
+    }
+    justify-content: space-between;
+  }
+}
+.header-nav-menu {
+  .menu-list {
+    font-size: 20px;
+    .menu-item {
+      a {
+        color: white;
+        &:hover {
+          color: aqua;
+        }
+        &.active {
+          color: aqua;
+        }
+      }
+    }
+  }
+  .social-list {
+    .social-item {
+      color: whitesmoke;
+      &:hover {
+        color: aqua;
+      }
+    }
+  }
+}
