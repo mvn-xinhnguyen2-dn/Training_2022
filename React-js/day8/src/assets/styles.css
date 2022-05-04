@@ -710,15 +710,13 @@ table {
   padding: 10px;
   padding: 0.625rem;
   background: #e9eaec;
-  text-align: center; }
-
-.header-page {
+  text-align: center;
   background-color: black;
   padding: 10px 0;
   color: whitesmoke; }
-  .header-page .container {
+  .page-header .container {
     justify-content: space-between; }
-    .header-page .container .header-logo img {
+    .page-header .container .header-logo img {
       width: 50px; }
 
 .header-nav-menu .menu-list {
@@ -731,20 +729,22 @@ table {
       color: aqua; }
 
 .header-nav-menu .social-list .social-item {
-  color: whitesmoke; }
+  color: whitesmoke;
+  font-size: 20px; }
   .header-nav-menu .social-list .social-item:hover {
     color: aqua; }
 
 .page-main {
-  padding: 30px 0px;
-  padding: 1.875rem 0rem;
+  padding: 0px 0px;
+  padding: 0rem 0rem;
   min-height: 80vh; }
 
 .page-footer {
   padding: 10px;
   padding: 0.625rem;
   background: #e9eaec;
-  text-align: center; }
+  text-align: center;
+  background-color: black; }
 
 .is-hidden {
   display: none; }
@@ -776,26 +776,26 @@ table {
         background-color: #555;
         color: white; }
 
-.user-list {
+.product-list {
   flex-wrap: wrap; }
-  .user-list .user-item {
+  .product-list .product-item {
     width: 31%;
     align-items: center;
     box-shadow: 0 0.1px 12px 0 rgba(107, 182, 158, 0.668);
     border-radius: 5px;
     list-style-type: none; }
-    .user-list .user-item:hover {
+    .product-list .product-item:hover {
       box-shadow: 0 0.1px 12px 0 rgba(47, 145, 195, 0.668); }
-    .user-list .user-item img {
+    .product-list .product-item img {
       width: 100px;
       height: 100px;
       object-fit: cover; }
 
-.page-number {
+.num-product {
   width: 200px; }
-  .page-number button {
+  .num-product button {
     padding: 5px 10px;
     margin-left: 5px; }
-    .page-number button.active {
+    .num-product button.active {
       background-color: #00676b;
       color: white; }
