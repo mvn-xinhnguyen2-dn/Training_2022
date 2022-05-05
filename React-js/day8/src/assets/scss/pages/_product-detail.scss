@@ -1,0 +1,12 @@
+.product-detail {
+  .title {
+    text-align: center;
+  }
+  .product-item {
+    .image {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+}

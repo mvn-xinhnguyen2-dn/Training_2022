@@ -429,6 +429,44 @@ h5 {
 h6 {
   font-size: 0.875rem; }
 
+.icon-fav {
+  color: wheat;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px; }
+  .icon-fav:hover {
+    font-size: 24px;
+    bottom: 18px;
+    right: 18px;
+    cursor: pointer;
+    color: #f4b057; }
+
+.icon-fav.active {
+  color: #b70606; }
+
+.icon-fav-header {
+  color: aqua;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 18px; }
+
+.fav-count {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  border-radius: 50%;
+  background-color: white;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px; }
+
 .btn {
   padding: 8px 16px;
   padding: 0.5rem 1rem;
@@ -728,10 +766,11 @@ table {
     .header-nav-menu .menu-list .menu-item a.active {
       color: aqua; }
 
-.header-nav-menu .social-list .social-item {
-  color: whitesmoke;
-  font-size: 20px; }
-  .header-nav-menu .social-list .social-item:hover {
+.social-list .social-item {
+  color: wheat;
+  font-size: 20px;
+  position: relative; }
+  .social-list .social-item:hover {
     color: aqua; }
 
 .page-main {
@@ -783,7 +822,8 @@ table {
     align-items: center;
     box-shadow: 0 0.1px 12px 0 rgba(107, 182, 158, 0.668);
     border-radius: 5px;
-    list-style-type: none; }
+    list-style-type: none;
+    position: relative; }
     .product-list .product-item:hover {
       box-shadow: 0 0.1px 12px 0 rgba(47, 145, 195, 0.668); }
     .product-list .product-item img {
@@ -799,3 +839,11 @@ table {
     .num-product button.active {
       background-color: #00676b;
       color: white; }
+
+.product-detail .title {
+  text-align: center; }
+
+.product-detail .product-item .image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover; }

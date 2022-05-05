@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { IoIosLogOut, IoLogoFacebook, IoIosLogIn } from "react-icons/io";
+import { FaHeart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 export default function Header() {
   const { logout } = useAuth();
+  const favs = useSelector((state) => state.fav.value);
+  console.log(favs);
   return (
     <>
       <header className="page-header ">
@@ -57,6 +61,12 @@ export default function Header() {
               <Link to="/">
                 <IoLogoFacebook />
               </Link>
+            </li>
+            <li className="social-item p-25">
+              <FaHeart className="icon-fav-header" />
+              {!!favs.length && (
+                <span className="fav-count">{favs.length}</span>
+              )}
             </li>
           </ul>
         </div>

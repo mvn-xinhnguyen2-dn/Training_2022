@@ -29,13 +29,14 @@
       }
     }
   }
-  .social-list {
-    .social-item {
-      color: whitesmoke;
-      font-size: 20px;
-      &:hover {
-        color: aqua;
-      }
+}
+.social-list {
+  .social-item {
+    color: wheat;
+    font-size: 20px;
+    position: relative;
+    &:hover {
+      color: aqua;
     }
   }
 }

@@ -22,7 +22,13 @@ export default function Products() {
       <ul className="product-list flex">
         {productList.map((product) => {
           let productItem = "";
-          productItem = <ProductItem product={product} />;
+          productItem = (
+            <ProductItem
+              key={product.id}
+              product={product}
+              productList={productList}
+            />
+          );
           return productItem;
         })}
       </ul>

@@ -1,0 +1,39 @@
+.icon-fav {
+  color: wheat;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  &:hover {
+    font-size: 24px;
+    bottom: 18px;
+    right: 18px;
+    cursor: pointer;
+    color: rgb(244, 176, 87);
+  }
+}
+.icon-fav.active {
+  color: rgb(183, 6, 6);
+}
+.icon-fav-header {
+  color: aqua;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 18px;
+}
+.fav-count {
+  position: absolute;
+  top:5px;
+  left: 25px;
+  border-radius: 50%;
+  background-color: white;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+}
