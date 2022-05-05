@@ -28,9 +28,9 @@
     }
   }
 }
-.user-list {
+.product-list {
   flex-wrap: wrap;
-  .user-item {
+  .product-item {
     width: 31%;
     align-items: center;
     box-shadow: 0 0.1px 12px 0 rgba(107, 182, 158, 0.668);
@@ -46,7 +46,7 @@
     }
   }
 }
-.page-number {
+.num-product {
   width: 200px;
   button {
     padding: 5px 10px;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function Banner() {
   return (
@@ -9,6 +9,5 @@ export default function Banner() {
         <button>Hire me</button>
       </div>
     </div>
-  )
+  );
 }
-
