@@ -19,19 +19,21 @@ export default function ProductDetail() {
   }, [id]);
   console.log(productDetail);
   return (
-    <div className="container">
-      <h1>ProductDetail: {productDetail.title}</h1>
-      <div
-        key={productDetail.id}
-        className="product-item flex my-20 mx-10 p-10"
-      >
-        <img className="mr-10 ml-5" src={productDetail.image} alt="" />
-        <div>
-          <p>ID: {productDetail.id}</p>
-          <p>Rating: {productDetail.category}</p>
-          <p>Title: {productDetail.title}</p>
-          <p>Rating: {productDetail.description}</p>
-          <p>Price: {productDetail.price}</p>
+    <div className="product-detail">
+      <div className="container">
+        <h1 className="title">ProductDetail: {productDetail.title}</h1>
+        <div
+          key={productDetail.id}
+          className="product-item flex my-20 mx-10 p-10"
+        >
+          <img className="image mr-10 ml-5" src={productDetail.image} alt="" />
+          <div>
+            <p>ID: {productDetail.id}</p>
+            <p>Rating: {productDetail.category}</p>
+            <p>Title: {productDetail.title}</p>
+            <p>Rating: {productDetail.description}</p>
+            <p>Price: {productDetail.price}</p>
+          </div>
         </div>
       </div>
     </div>
