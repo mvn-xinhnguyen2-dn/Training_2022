@@ -1,0 +1,15 @@
+.login-form {
+  background-color: #efefef;
+  @include pxRem(padding, 40);
+  border-radius: 10px;
+  width: 70%;
+  margin: 0 auto;
+  form {
+    label {
+      @include pxRem(padding-top, 20);
+    }
+    input {
+      padding: 15px 10px;
+    }
+  }
+}
