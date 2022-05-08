@@ -12,7 +12,7 @@ export default function Header() {
   console.log(favs);
   return (
     <>
-      <header className="page-header ">
+      <header className="page-header py-10">
         <div className="container flex">
           <div className="header-logo mt-5">
             <NavLink to="/" exact activeClassName="active">

@@ -40,6 +40,9 @@ a img {
 article, aside, details, figure, footer, header, menu, nav, section, summary {
   display: block; }
 
+.center {
+  text-align: center; }
+
 .mx-0 {
   margin-left: 0 !important;
   margin-right: 0 !important; }
@@ -433,12 +436,18 @@ h6 {
   color: wheat;
   position: absolute;
   right: 20px;
+  right: 1.25rem;
   bottom: 20px;
-  font-size: 20px; }
+  bottom: 1.25rem;
+  font-size: 20px;
+  font-size: 1.25rem; }
   .icon-fav:hover {
     font-size: 24px;
-    bottom: 18px;
+    font-size: 1.5rem;
     right: 18px;
+    right: 1.125rem;
+    bottom: 18px;
+    bottom: 1.125rem;
     cursor: pointer;
     color: #f4b057; }
 
@@ -449,23 +458,32 @@ h6 {
   color: aqua;
   position: absolute;
   right: 20px;
+  right: 1.25rem;
   bottom: 20px;
-  font-size: 18px; }
+  bottom: 1.25rem;
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 .fav-count {
   position: absolute;
   top: 5px;
+  top: 0.3125rem;
   left: 25px;
+  left: 1.5625rem;
   border-radius: 50%;
-  background-color: white;
-  width: 18px;
+  background-color: #fff;
   height: 18px;
+  height: 1.125rem;
+  width: 18px;
+  width: 1.125rem;
   font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: black;
+  color: #111;
   text-align: center;
   vertical-align: middle;
-  line-height: 18px; }
+  line-height: 18px;
+  line-height: 1.125rem; }
 
 .btn {
   padding: 8px 16px;
@@ -490,6 +508,11 @@ h6 {
   .btn.disabled, .btn:disabled {
     pointer-events: none;
     background: #f7f7f7; }
+
+.login-submit {
+  text-align: center;
+  margin-right: 20px;
+  margin-right: 1.25rem; }
 
 input[type="text"],
 input[type="password"],
@@ -749,28 +772,30 @@ table {
   padding: 0.625rem;
   background: #e9eaec;
   text-align: center;
-  background-color: black;
-  padding: 10px 0;
-  color: whitesmoke; }
+  background-color: #111;
+  color: #fff; }
   .page-header .container {
     justify-content: space-between; }
     .page-header .container .header-logo img {
-      width: 50px; }
+      width: 50px;
+      width: 3.125rem; }
 
 .header-nav-menu .menu-list {
   font-size: 20px; }
   .header-nav-menu .menu-list .menu-item a {
-    color: white; }
+    color: #fff; }
     .header-nav-menu .menu-list .menu-item a:hover {
       color: aqua; }
     .header-nav-menu .menu-list .menu-item a.active {
       color: aqua; }
 
 .social-list .social-item {
-  color: wheat;
+  color: #fff;
   font-size: 20px;
   position: relative; }
-  .social-list .social-item:hover {
+  .social-list .social-item a:-webkit-any-link {
+    color: #fff; }
+  .social-list .social-item a:hover {
     color: aqua; }
 
 .page-main {
@@ -791,6 +816,7 @@ table {
 .banner-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3schools.com/howto/photographer.jpg");
   height: 300px;
+  height: 18.75rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -828,7 +854,9 @@ table {
       box-shadow: 0 0.1px 12px 0 rgba(47, 145, 195, 0.668); }
     .product-list .product-item img {
       width: 100px;
+      width: 6.25rem;
       height: 100px;
+      height: 6.25rem;
       object-fit: cover; }
 
 .num-product {
@@ -840,10 +868,33 @@ table {
       background-color: #00676b;
       color: white; }
 
-.product-detail .title {
-  text-align: center; }
+.product-detail .product-brief {
+  background-color: rgba(184, 181, 181, 0.132); }
 
-.product-detail .product-item .image {
+.product-detail .image {
   width: 500px;
+  width: 31.25rem;
   height: 500px;
+  height: 31.25rem;
   object-fit: cover; }
+
+.product-detail .breadcrumbs {
+  background-color: antiquewhite;
+  padding: 15px;
+  padding: 0.9375rem; }
+  .product-detail .breadcrumbs a {
+    padding: 20px;
+    padding: 1.25rem; }
+
+.login-form {
+  background-color: #efefef;
+  padding: 40px;
+  padding: 2.5rem;
+  border-radius: 10px;
+  width: 70%;
+  margin: 0 auto; }
+  .login-form form label {
+    padding-top: 20px;
+    padding-top: 1.25rem; }
+  .login-form form input {
+    padding: 15px 10px; }

@@ -1,6 +1,6 @@
 .banner-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3schools.com/howto/photographer.jpg");
-  height: 300px;
+  @include pxRem(height, 300);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,8 +41,8 @@
       box-shadow: 0 0.1px 12px 0 rgba(47, 145, 195, 0.668);
     }
     img {
-      width: 100px;
-      height: 100px;
+      @include pxRem(width, 100);
+      @include pxRem(height, 100);
       object-fit: cover;
     }
   }

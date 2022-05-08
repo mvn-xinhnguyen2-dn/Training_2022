@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import ProductItem from "../../../components/modules/ProductItem";
+import { apiProductGetList } from "../../../api/product/product.api";
 
 export default function Products() {
   const [productList, setProductList] = useState([]);
   const [numProduct, setNumProduct] = useState(6);
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products?limit=${numProduct}`)
-      .then(function (response) {
-        return response.json();
-      })
-      .then((products) => {
-        setProductList(products);
-      })
-      .catch((error) => console.error(error));
+    apiProductGetList(numProduct).then((e) => {
+      console.log(e.data);
+      setProductList(e.data);
+    });
+
+    console.log(process.env.REACT_APP_TEST);
   }, [numProduct]);
+  console.log(productList);
 
   return (
     <div className="container">

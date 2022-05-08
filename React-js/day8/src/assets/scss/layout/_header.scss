@@ -2,13 +2,12 @@
   @include pxRem(padding, 10);
   background: map-get($colors, bg-gray);
   text-align: center;
-  background-color: black;
-  padding: 10px 0;
-  color: whitesmoke;
+  background-color: map-get($colors, black);
+  color: map-get($colors, white);
   .container {
     .header-logo {
       img {
-        width: 50px;
+        @include pxRem(width, 50);
       }
     }
     justify-content: space-between;
@@ -19,12 +18,12 @@
     font-size: 20px;
     .menu-item {
       a {
-        color: white;
+        color: map-get($colors, white);
         &:hover {
-          color: aqua;
+          color: map-get($colors, txt-hover);
         }
         &.active {
-          color: aqua;
+          color: map-get($colors, txt-hover);
         }
       }
     }
@@ -32,11 +31,14 @@
 }
 .social-list {
   .social-item {
-    color: wheat;
+    a:-webkit-any-link {
+      color: map-get($colors, white);
+    }
+    color: map-get($colors, white);
     font-size: 20px;
     position: relative;
-    &:hover {
-      color: aqua;
+    a:hover {
+      color: map-get($colors, txt-hover);
     }
   }
 }

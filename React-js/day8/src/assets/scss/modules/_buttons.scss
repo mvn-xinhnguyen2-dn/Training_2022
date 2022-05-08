@@ -26,3 +26,7 @@
     background: map-get($colors, bg-gray-light);
   }
 }
+.login-submit {
+  text-align: center;
+  @include pxRem(margin-right, 20);
+}
